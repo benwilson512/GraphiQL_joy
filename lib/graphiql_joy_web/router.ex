@@ -16,11 +16,11 @@ defmodule GraphiqlJoyWeb.Router do
 
   get("/", Redirect, to: "/graphiql")
 
-  scope "/" do    
+  scope "/" do
     pipe_through(:graphql)
 
     forward("/api", Absinthe.Plug, schema: GraphiqlJoy.Schema)
-    forward("/graphiql", Absinthe.Plug.GraphiQL, 
+    forward("/graphiql", Absinthe.Plug.GraphiQL,
         schema: GraphiqlJoy.Schema)
   end
 

@@ -1,5 +1,6 @@
 defmodule GraphiqlJoyWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :graphiql_joy
+  use Absinthe.Phoenix.Endpoint
 
   socket "/socket", GraphiqlJoyWeb.UserSocket
 

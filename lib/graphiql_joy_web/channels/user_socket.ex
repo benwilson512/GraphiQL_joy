@@ -1,6 +1,6 @@
 defmodule GraphiqlJoyWeb.UserSocket do
   use Phoenix.Socket
-  use Absinthe.Phoenix.Socket, schema: YetiWeb.Schema
+  use Absinthe.Phoenix.Socket, schema: GraphiqlJoy.Schema
 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket

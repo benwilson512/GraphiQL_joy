@@ -10,6 +10,7 @@ defmodule GraphiqlJoy.Application do
     children = [
       # Start the endpoint when the application starts
       supervisor(GraphiqlJoyWeb.Endpoint, []),
+      supervisor(Absinthe.Subscription, [GraphiqlJoyWeb.Endpoint])
       # Start your own worker by calling: GraphiqlJoy.Worker.start_link(arg1, arg2, arg3)
       # worker(GraphiqlJoy.Worker, [arg1, arg2, arg3]),
     ]
